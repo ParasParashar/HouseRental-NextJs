@@ -35,7 +35,7 @@ const SearchModel = () => {
       dynamic(() => import("../Map"), {
         ssr: false,
       }),
-    [location]
+    []
   );
   const onBack = useCallback(() => {
     setStep((value) => value - 1);
@@ -75,7 +75,6 @@ const SearchModel = () => {
     searchModel.onClose();
     router.push(url);
   }, [
-    router,
     step, 
     searchModel, 
     location, 

@@ -108,7 +108,7 @@ const onSubmit:SubmitHandler<FieldValues>=(data)=>{
 
   const Map = useMemo(() => dynamic(() => import('../Map'), { 
     ssr: false 
-  }), [location]);
+  }), []);
 
   let bodyContent = (
     <div className="flex flex-col gap-8 ">

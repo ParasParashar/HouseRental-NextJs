@@ -1,23 +1,24 @@
-"use client"
+'use client';
 
 import { useEffect } from "react";
-import { toast } from "react-hot-toast";
-import EmptyState from "./components/EmptyState";
 
-interface errorProps{
-    error:Error;
+import EmptyState from "@/app/components/EmptyState";
+
+interface ErrorStateProps {
+  error: Error
 }
-const errorState:React.FC<errorProps> = ({error}) => {
-    useEffect(()=>{
-        console.error(error);
-        toast.error("Something Went Wrong!!")
-    },[]);
-  return (
+
+const ErrorState: React.FC<ErrorStateProps> = ({ error }) => {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
+
+  return ( 
     <EmptyState
-    title="Oh NO"
-    subtitle="Something Went Wrong!!!"
+      title="Uh Oh"
+      subtitle="Something went wrong!"
     />
-  )
+   );
 }
-
-export default errorState
+ 
+export default ErrorState;
