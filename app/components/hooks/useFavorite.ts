@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 import UseLoginModel from "./useLoginModel";
 interface IUseFavorite {
-    listeningId: string;
+     listeningId: string | undefined;
     currentUser: SafeUser | null;
 };
 const useFavorite = ({ listeningId, currentUser }: IUseFavorite) => {
