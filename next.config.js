@@ -4,10 +4,11 @@ const nextConfig = {
         appDir:true,
     },
     images:{
+        unoptimized: true,
         domains:[
             'res.cloudinary.com'
         ]
-    }
+    },
 }
 
 module.exports = nextConfig
