@@ -7,7 +7,7 @@ import { toast } from "react-hot-toast";
 import UseLoginModel from "./useLoginModel";
 interface IUseFavorite {
      listeningId: string ;
-    currentUser: SafeUser | null;
+    currentUser?: SafeUser | null;
 };
 const useFavorite = ({ listeningId, currentUser }: IUseFavorite) => {
     const router = useRouter();
